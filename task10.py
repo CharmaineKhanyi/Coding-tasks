@@ -10,13 +10,10 @@ def common_chars(str1,str2):
 	common_chars = list(common_dict.elements()) 
 	common_chars = sorted(common_chars) 
 
-	return ''.join(common_chars) 
+	return ', '.join(common_chars) 
 
-str1 = 'MyFirstString'
-str2 = 'MySecondString'
-print("Two strings: "+str1+' : '+str2)
-print(common_chars(str1, str2))
-str1 = 'MyFirstString'
-str2 = 'MySecondString'
-print("Two strings: "+str1+' : '+str2)
-print(common_chars(str1, str2))
+str1 = 'house'
+str2 = 'computers'
+print("Input: "+str1+' , '+str2)
+print("Common letters: "+common_chars(str1, str2))
+
