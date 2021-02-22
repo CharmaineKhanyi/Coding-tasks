@@ -1,22 +1,11 @@
-from collections import Counter 
-def common_chars(str1,str2): 	
-	d1 = Counter(str1) 
-	d2 = Counter(str2) 
-	common_dict = d1 & d2 
-	if len(common_dict) == 0: 
-		return "No common characters."
+def commonLetters(string1, string2):
+	common = ""
+	for letter in string1:
+		if letter in string2 and not common:
+			if common == "":
+				common = letter
+			else:
+				common = common + ", " + letter
+	return common
 
-	# list of common elements 
-	common_chars = list(common_dict.elements()) 
-	common_chars = sorted(common_chars) 
-
-	return ''.join(common_chars) 
-
-str1 = 'MyFirstString'
-str2 = 'MySecondString'
-print("Two strings: "+str1+' : '+str2)
-print(common_chars(str1, str2))
-str1 = 'MyFirstString'
-str2 = 'MySecondString'
-print("Two strings: "+str1+' : '+str2)
-print(common_chars(str1, str2))
+commonLetters("Greetings", "Hello")
