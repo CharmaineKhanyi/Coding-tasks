@@ -2,8 +2,8 @@ def even_or_odd(num):
 
     
     if (num % 2) == 0:  
-        print(f'"{num} is Even number"')  
+        print("even")  
     else:  
-        print(f'"{num} is Odd number"')  
+        print("odd")  
 
 even_or_odd(24)
